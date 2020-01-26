@@ -1,6 +1,8 @@
 /* eslint-disable-next-line */
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-logo {
@@ -30,5 +32,24 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.loadingGif{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  .maxWidth{
+    width: 100vw;
+    height: auto;
+  }
+  .maxHeight{
+    height: 100vh;
+    width: auto;
   }
 }

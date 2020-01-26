@@ -1,15 +1,15 @@
 
 ![Version](https://img.shields.io/badge/Version-1.0-brightgreen?style=for-the-badge)
 
-# Welcome to my React Template
+# One More Thing
 
-This is a React Template built on top of npx create-react-app. This template includes many more dependencies and little to no set required to use redux and firebase database
+This is a application designed for roomates, friends, spouses. There is always one more thing you need to add to a grocery list that you remember right at the last moment. This app is designed for any user to enter things they need from the store and share it with their other roomates or spouse so they don't forget what they need to buy.
 
 ## Installation
 
 To begin open your console of choice and navigate to your desktop.
 
-1) run `git clone https://github.com/Lilkgb/React-Template`
+1) run `git clone https://github.com/Lilkgb/1MT`
 2) navigate to the new react-template folder by running `cd react-template`
 3) run `npm install` or `npm i` to install all needed dependencies
 4) depending your text editor run the command to open the files. I use VSC so it would be `code .`

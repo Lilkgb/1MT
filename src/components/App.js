@@ -4,17 +4,19 @@ import Error404 from './Error404';
 import Home from './Home';
 import { Switch, Route } from 'react-router-dom';
 import {connect} from 'react-redux';
+import SignIn from './SignIn';
 
 function App(props) {
 
-  console.log(props.authUser)
-
   let preDisplay;
+  let checkedAuthState;
 
-  if(props.authUser){
-    preDisplay = null; 
+  if(props.authUser === true){
+    preDisplay = null;
+    checkedAuthState = Home;
   } else if (props.authUser === false){
     preDisplay = null;
+    checkedAuthState = SignIn;
   } else {
     preDisplay = 
     <div className="loadingGif">
@@ -26,7 +28,7 @@ function App(props) {
     <div className="App">
       {preDisplay}
       <Switch>
-        <Route exact path ='/' component={Home}/>
+        <Route exact path ='/' component={checkedAuthState}/>
         <Route component={Error404}/>
       </Switch>
     </div>

@@ -3,8 +3,6 @@ import * as firebase from 'firebase';
 import {store} from './../index';
 const {types, firebaseConfig} = constants;
 
-console.log(firebaseConfig)
-
 firebase.initializeApp(firebaseConfig);
 
 firebase.auth().onAuthStateChanged(function(user) {

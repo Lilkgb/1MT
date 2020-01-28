@@ -5,8 +5,12 @@ import Home from './Home';
 import { Switch, Route } from 'react-router-dom';
 import {connect} from 'react-redux';
 import SignIn from './SignIn';
+import * as firebase from 'firebase';
 
 function App(props) {
+
+  var user = firebase.auth().currentUser;
+  console.log(firebase)
 
   let preDisplay;
   let checkedAuthState;

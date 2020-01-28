@@ -18,6 +18,7 @@ function SignIn(){
             }
         }).catch(error => {
             setError(error.message);
+            console.log(error)
         })
     }
 

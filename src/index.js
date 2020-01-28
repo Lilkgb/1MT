@@ -8,7 +8,7 @@ import {createStore, applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import rootReducer from './reducers';
 import {Provider} from 'react-redux';
-import './actions';
+import './actions/index';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 export {store};

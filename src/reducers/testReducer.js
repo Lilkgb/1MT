@@ -6,7 +6,7 @@ const testReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.TEST_FUNCTION:
       newState = state;
-        console.log("test_function")
+        console.log("test function")
       return newState;
     default:
       return state;

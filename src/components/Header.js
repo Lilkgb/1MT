@@ -11,7 +11,7 @@ function Header(props){
   return(
     <div className="header">
       <Link to='/'>Home</Link>
-      <h2>Welcome {props.user.name}</h2>
+      <h2>Welcome </h2>
       <button onClick={logOutUser}>Log Out</button>
     </div>
   )

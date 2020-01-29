@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as firebase from 'firebase';
 
-function Header(){
+function Header(props){
 
   function logOutUser(){
     firebase.auth().signOut();
@@ -11,7 +11,7 @@ function Header(){
   return(
     <div className="header">
       <Link to='/'>Home</Link>
-      <h2>Welcome New User</h2>
+      <h2>Welcome {props.user.name}</h2>
       <button onClick={logOutUser}>Log Out</button>
     </div>
   )

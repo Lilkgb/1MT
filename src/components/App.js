@@ -28,7 +28,7 @@ function App(props) {
     <div className="App">
       {preDisplay}
       <Switch>
-        <Route exact path ='/' component={checkedAuthState}/>
+        <Route exact path ='/' user={props.userInformation} component={checkedAuthState}/>
         <Route component={Error404}/>
       </Switch>
     </div>

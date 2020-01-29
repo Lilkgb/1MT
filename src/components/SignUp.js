@@ -19,7 +19,12 @@ function SignUp(props){
                 _passwordTwo.value = '';
                 return setPasswordError("Your passwords doesn't match. Please try again.")
             } else {
-                firebase.auth().createUserWithEmailAndPassword(_email.value, _passwordOne.value).catch(error => {
+                firebase.auth().createUserWithEmailAndPassword(_email.value, _passwordOne.value).then(user => {
+                    let userId = user.user.uid;
+                    firebase.database().ref(`users/${userId}`).set({user_id: userId, name: _name.value, email: _email.value}).catch(error => {
+                        console.log(error)
+                    })
+                }).catch(error => {
                     setPasswordError(error.message)
                 })
             }

@@ -7,6 +7,9 @@ firebase.initializeApp(firebaseConfig);
 
 firebase.auth().onAuthStateChanged(function(user) {
   if(user){
+    firebase.database().ref(`users/${user.uid}`).on('value', function(snapshot) {
+      store.dispatch(setUserInformation(snapshot.val()))
+    })
     store.dispatch(authUserTrue());
   } else {
     store.dispatch(authUserFalse());
@@ -23,4 +26,13 @@ export const authUserTrue = () => ({
 
 export const authUserFalse = () => ({
   type: types.AUTH_USER_FALSE
+})
+
+export const setUserInformation = (information) => ({
+  type: types.SET_USER_INFORMATION,
+  information
+})
+
+export const dumpUserInformation = () => ({
+  type: types.DUMP_USER_INFORMATION
 })

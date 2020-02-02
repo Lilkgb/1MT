@@ -1,6 +1,11 @@
+@import './Mixin.scss';
+
 .headerMain{
     background-color: teal;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include mQ(775px){
+        background-color: red;
+    }
 }

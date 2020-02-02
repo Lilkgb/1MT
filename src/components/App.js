@@ -12,8 +12,15 @@ function App(props) {
   let checkedAuthState;
 
   if(props.authUser === true){
-    preDisplay = null;
-    checkedAuthState = Home;
+    if(props.userInformation){
+      preDisplay = null;
+      checkedAuthState = Home;
+    } else {
+      preDisplay = 
+      <div className="loadingGif">
+        <img src={require('../assets/loading.gif')}/>
+      </div>
+    }
   } else if (props.authUser === false){
     preDisplay = null;
     checkedAuthState = SignIn;
@@ -36,7 +43,8 @@ function App(props) {
 }
 
 const mapStateToProps = state => ({
-   authUser: state.authState
+   authUser: state.authState,
+   userInformation: state.userInformationState
 })
 
 export default connect(mapStateToProps)(App);

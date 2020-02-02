@@ -1,5 +1,4 @@
 import constants from './../constants';
-import * as firebase from 'firebase';
 const {types, userInformationState} = constants;
 
 const userInformationReducer = (state = userInformationState, action) => {

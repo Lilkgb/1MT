@@ -6,7 +6,7 @@ import userInformationReducer from './userInformationReducer';
 const rootReducer = combineReducers({
     testState: testReducer,
     authState: authReducer,
-    userInformationState: userInformationReducer,
+    userInformationState: userInformationReducer
 });
 
 export default rootReducer;

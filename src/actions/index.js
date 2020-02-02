@@ -13,6 +13,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     store.dispatch(authUserTrue());
   } else {
     store.dispatch(authUserFalse());
+    store.dispatch(dumpUserInformation());
   }
 })
 
